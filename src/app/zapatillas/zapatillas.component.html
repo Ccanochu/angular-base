@@ -1,7 +1,17 @@
-<h1>{{title}}</h1>
+<h2>{{title}}</h2>
+<p>Las marcas que contamos</p>
 <ul>
-    <li *ngFor="let zapatilla of zapatillas">
-        {{zapatilla.modelo}} - <span>{{zapatilla.precio}}</span>
-        <span *ngIf="zapatilla.precio < 80" style="background:green">EN OFERTA!</span>
+    <li *ngFor="let marca of marcas">
+        {{marca}}
     </li>
+</ul>
+<p>Las deportivas que tenemos disponibles:</p>
+<ul>
+    <li *ngFor="let deportiva of zapatillas" style="list-style:none">
+        <div *ngIf="deportiva.stock == true">
+        {{deportiva.modelo}} - <span>{{deportiva.precio}}</span>
+        <span *ngIf="deportiva.precio < 80" style="background:green">EN OFERTA!</span>
+        </div>
+    </li>
+   
 </ul>

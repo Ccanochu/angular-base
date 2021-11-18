@@ -1,4 +1,9 @@
-<div [ngStyle]="{'background':configuracion.background}">
+<div [ngStyle]="{
+                'background':configuracion.background,
+                'padding':'20px',
+                'border':'5px solid black',
+                'border-color':configuracion.color
+            }">
 
     <h1>{{title}} ejecutando</h1>
 
